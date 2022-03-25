@@ -1,27 +1,6 @@
 ﻿using System;
-namespace arrayLIB
+namespace Array_Library
 {
-    class examples
-    {
-        static void Main()
-        {
-            int[] test = { 1, 2, 3 };
-            test = arraysHelper.addToArray(test, 26);
-            test = arraysHelper.removeFromArray(test, 1);
-            int[] indexes = { 2, 0 };
-            test= arraysHelper.swapItemsInArray(test, indexes);
-            for (int i = 0; i < test.Length; i++)
-            {
-                Console.WriteLine(test[i]);
-            }
-            Console.WriteLine("max: " + arraysHelper.max((double[])arraysHelper.doubleParse(test)));
-            Console.WriteLine("max: " + arraysHelper.min((double[])arraysHelper.doubleParse(test)));
-            Console.WriteLine("average: " + arraysHelper.average((double[])arraysHelper.doubleParse(test)));
-
-
-        }
-
-    }
     public class arraysHelper
     {
 
@@ -39,7 +18,7 @@ namespace arrayLIB
         }
         public static T[] removeFromArray<T>(T[] inputArray, int index)
         {
-            if(index > inputArray.Length)
+            if (index > inputArray.Length)
             {
                 throw new ArgumentException("The array doesn't have a index that big (use addToArray to increase index)");
             }
@@ -83,20 +62,20 @@ namespace arrayLIB
         public static double[] doubleParse<T>(T[] inputArray)
         {
             double[] newArray = new double[inputArray.Length];
-            
-            for(int i = 0; i < inputArray.Length; i++)
+
+            for (int i = 0; i < inputArray.Length; i++)
             {
                 newArray[i] = Convert.ToDouble(inputArray[i]);
             }
             return newArray;
-            
+
         }
         public static double max(double[] inputArray)
         {
             double double_max = inputArray[0];
             for (int i = 0; i < inputArray.Length; i++)
             {
-                if(double_max < inputArray[i])
+                if (double_max < inputArray[i])
                 {
                     double_max = inputArray[i];
                 }
@@ -121,7 +100,7 @@ namespace arrayLIB
             for (int i = 0; i < inputArray.Length; i++)
             {
 
-                 double_all += inputArray[i];
+                double_all += inputArray[i];
 
             }
             double_all = double_all / inputArray.Length;

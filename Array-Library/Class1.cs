@@ -1,7 +1,7 @@
-﻿using System;
+﻿
 namespace Array_Library
 {
-    public class arraysHelper
+    public class arrayLibrary
     {
 
         public static T[] addToArray<T>(T[] inputArray, T inputValue)

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Array_Library</RootNamespace>
+    <PackageId>Array-Library_Mitchellston</PackageId>
+    <Authors>Mitchellston</Authors>
+    <Product>Array-Library</Product>
+    <Description>This libraty adds some funtions to improve arrays :)</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\Projects\arraylib\Packaged-Library\</OutputPath>
+  </PropertyGroup>
+
+</Project>

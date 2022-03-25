@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace Array_Library
 {
     public class arrayLibrary

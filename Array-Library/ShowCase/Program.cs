@@ -1,13 +1,13 @@
 ﻿using System;
 using Array_Library;
 
-namespace showCase
+namespace ShowCase
 {
     class Program
     {
         static void Main()
         {
-            double[] double_test = { 5.4 , 9.6, 135.6};
+            double[] double_test = { 5.4, 9.6, 135.6 };
             //adds a value to the array
             double_test = arrayLibrary.addToArray(double_test, 2.5235);
             Console.WriteLine("add value");
@@ -44,5 +44,3 @@ namespace showCase
         }
     }
 }
-
-

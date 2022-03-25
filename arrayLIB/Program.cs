@@ -61,11 +61,11 @@ namespace arrayLIB
             T[] newArray = new T[inputArray.Length];
             if (indexes.Length > 2)
             {
-                throw new ArgumentException("Er kunnen maar twee indexes zijn in de indexes array!");
+                throw new ArgumentException("There can only be two indexes in the indexes array!");
             }
             if (indexes.Length < indexes[0] || indexes.Length < indexes[1])
             {
-                throw new ArgumentException("Een index die je wilt swappen is niet in de array!");
+                throw new ArgumentException("A index that you want to swap isn't in the array!");
             }
             newArray[indexes[0]] = inputArray[indexes[1]];
             newArray[indexes[1]] = inputArray[indexes[0]];

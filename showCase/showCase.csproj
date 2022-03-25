@@ -9,5 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Array-Library\Array-Library.csproj" />
+    <ProjectReference Include="..\Array-Library\Array-Library-sourceCode.csproj" />
   </ItemGroup>
 </Project>

@@ -20,8 +20,8 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            //array = arrayLibrary.addToArray(array, index);
-            double_test = arrayLibrary.addToArray(double_test, 2.5235);
+            //array = arrayLibrary.add(array, index);
+            double_test = arrayLibrary.add(double_test, 2.5235);
             //values double_test: 5.4, 9.6, 135.6, 2.5235
         }
     }
@@ -42,8 +42,8 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            //var array = arrayLibrary.removeFromArray(var array, var index);
-            double_test = arrayLibrary.removeFromArray(double_test, 0);
+            //var array = arrayLibrary.remove(var array, var index);
+            double_test = arrayLibrary.remove(double_test, 0);
             //values double_test: 9.6, 135.6
         }
     }
@@ -65,8 +65,10 @@ namespace ShowCase
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
             int[] indexes = { 0, 1};
-            //var array = arrayLibrary.swapItemsInArray(var array, var indexes);
-            double_test = arrayLibrary.swapItemsInArray(double_test, indexes);
+
+            //var array = arrayLibrary.swap(var array, var indexes);
+            double_test = arrayLibrary.swap(double_test, indexes);
+r
             //values double_test: 9.6, 5.4, 135.6
         }
     }
@@ -75,19 +77,9 @@ namespace ShowCase
 
 <br>
 
-### Min/ max (smallest/ biggest) values in array:
+### Limited add:
 
-<br>
-
----
-
-**NOTE**
-
-Min/ max only works with arrays of type double!
-
----
-
-<br>
+#### Removes oldest(index= 0) and moves everything down and adds to the last index the new value!
 
 ```C#
 using Array_Library;
@@ -99,10 +91,33 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            double min = arrayLibrary.min(double_test);
-            double max = arrayLibrary.max(double_test);
+            //var array = arrayLibrary.limitedAdd(var array, var indexes);
+            double_test = arrayLibrary.limitedAdd(double_test, 15.79);
+            //values double_test: 5.4, 135.6, 15.79
+        }
+    }
+}
+```
+
+<br>
+
+### Min/ max (smallest/ biggest) values in array:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_testMin = { 5.4, 9.6, 135.6 };
+            int[] int_testMax = {1, 5, 25};
+            double min = arrayLibrary.min(double_testMin);
+            double max = arrayLibrary.max(int_testMax);
             Console.WriteLine("min = "+min+" & max = "+max);
-            //Console output: min = 5.4 & max = 135.6
+            //Console output: min = 5.4 & max = 25
         }
     }
 }
@@ -111,18 +126,6 @@ namespace ShowCase
 <br>
 
 ### Average:
-
-<br>
-
----
-
-**NOTE**
-
-Average only works with arrays of type double!
-
----
-
-<br>
 
 ```C#
 using Array_Library;

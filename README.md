@@ -52,6 +52,28 @@ namespace ShowCase
 
 <br>
 
+### Insert value into array:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            //var array = arrayLibrary.remove(var array, var index);
+            double_test = arrayLibrary.insert(double_test, 12, 1);
+            //values double_test: 5.4, 12, 9.6, 135.6
+        }
+    }
+}
+```
+
+<br>
+
 ### Swap/ switch values in array:
 
 ```C#
@@ -140,6 +162,28 @@ namespace ShowCase
             double average = arrayLibrary.average(double_test);
             Console.WriteLine("average = "+average);
             //Console output: average = 50,199999999999996
+        }
+    }
+}
+```
+
+<br>
+
+### Sum:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            double sum = arrayLibrary.sum(double_test);
+            Console.WriteLine("sum = "+sum);
+            //Console output: sum = 150,6
         }
     }
 }

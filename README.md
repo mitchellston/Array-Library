@@ -66,8 +66,8 @@ namespace ShowCase
             double[] double_test = { 5.4, 9.6, 135.6 };
             int[] indexes = { 0, 1};
             //var array = arrayLibrary.swapItemsInArray(var array, var indexes);
-            double_test = arrayLibrary.swapItemsInArray(double_test, 0);
-            //values double_test: 9.6, 135.6
+            double_test = arrayLibrary.swapItemsInArray(double_test, indexes);
+            //values double_test: 9.6, 5.4, 135.6
         }
     }
 }

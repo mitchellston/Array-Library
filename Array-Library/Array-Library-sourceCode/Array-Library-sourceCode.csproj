@@ -6,8 +6,9 @@
     <PackageId>Array-Library_Mitchellston</PackageId>
     <Authors>Mitchellston</Authors>
     <Product>Array-Library</Product>
-    <Description>This libraty adds some funtions to improve arrays :)</Description>
+    <Description>This library adds some funtions to improve arrays :)</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.5.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -32,7 +32,7 @@ namespace ShowCase
             }
             Console.WriteLine("limited add");
             //this will remove the oldest of the array and will then add the nieuw input
-            double_test = arrayLibrary.limitedAdd(double_test, 5.4, 4);
+            double_test = arrayLibrary.limitedAdd(double_test, 5.4);
             for (int i = 0; i < double_test.Length; i++)
             {
                 Console.WriteLine(double_test[i]);

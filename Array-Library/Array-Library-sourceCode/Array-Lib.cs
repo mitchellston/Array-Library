@@ -22,7 +22,7 @@ namespace Array_Library
             return newArray;
 
         }
-        public static T[] limitedAdd<T>(T[] inputArray, T inputValue, int max)
+        public static T[] limitedAdd<T>(T[] inputArray, T inputValue)
         {
             T[] newArray = new T[inputArray.Length];
 

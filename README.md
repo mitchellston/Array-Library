@@ -75,6 +75,30 @@ namespace ShowCase
 
 <br>
 
+### Limited add:
+
+#### Removes oldest(index= 0) and moves everything down and adds to the last index the new value!
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            //var array = arrayLibrary.limitedAdd(var array, var indexes);
+            double_test = arrayLibrary.limitedAdd(double_test, 15.79);
+            //values double_test: 5.4, 135.6, 15.79
+        }
+    }
+}
+```
+
+<br>
+
 ### Min/ max (smallest/ biggest) values in array:
 
 ```C#

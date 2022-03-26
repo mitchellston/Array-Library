@@ -4,7 +4,6 @@ A C# library that provides a few convenient functions for arrays.<br>
 **In packaged-library is the build version. Array-Library is the source code!**
 
 <br>
-<br>
 
 # Usage:
 

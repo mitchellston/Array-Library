@@ -21,7 +21,7 @@ namespace ShowCase
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
             //array = arrayLibrary.addToArray(array, index);
-            double_test = arrayLibrary.addToArray(double_test, 2.5235);
+            double_test = arrayLibrary.add(double_test, 2.5235);
             //values double_test: 5.4, 9.6, 135.6, 2.5235
         }
     }
@@ -43,7 +43,7 @@ namespace ShowCase
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
             //var array = arrayLibrary.removeFromArray(var array, var index);
-            double_test = arrayLibrary.removeFromArray(double_test, 0);
+            double_test = arrayLibrary.remove(double_test, 0);
             //values double_test: 9.6, 135.6
         }
     }
@@ -66,7 +66,7 @@ namespace ShowCase
             double[] double_test = { 5.4, 9.6, 135.6 };
             int[] indexes = { 0, 1};
             //var array = arrayLibrary.swapItemsInArray(var array, var indexes);
-            double_test = arrayLibrary.swapItemsInArray(double_test, indexes);
+            double_test = arrayLibrary.swap(double_test, indexes);
             //values double_test: 9.6, 5.4, 135.6
         }
     }

@@ -93,7 +93,7 @@ namespace ShowCase
             double[] double_test = { 5.4, 9.6, 135.6 };
             //var array = arrayLibrary.limitedAdd(var array, var indexes);
             double_test = arrayLibrary.limitedAdd(double_test, 15.79);
-            //values double_test: 5.4, 135.6, 15.79
+            //values double_test: 9.6, 135.6, 15.79
         }
     }
 }

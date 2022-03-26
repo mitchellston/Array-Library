@@ -86,11 +86,12 @@ namespace ShowCase
     {
         static void Main()
         {
-            double[] double_test = { 5.4, 9.6, 135.6 };
-            double min = arrayLibrary.min(double_test);
-            double max = arrayLibrary.max(double_test);
+            double[] double_testMin = { 5.4, 9.6, 135.6 };
+            int[] int_testMax = {1, 5, 25};
+            double min = arrayLibrary.min(double_testMin);
+            double max = arrayLibrary.max(int_testMax);
             Console.WriteLine("min = "+min+" & max = "+max);
-            //Console output: min = 5.4 & max = 135.6
+            //Console output: min = 5.4 & max = 25
         }
     }
 }

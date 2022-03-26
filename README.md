@@ -90,7 +90,6 @@ namespace ShowCase
 
             //var array = arrayLibrary.swap(var array, var indexes);
             double_test = arrayLibrary.swap(double_test, indexes);
-r
             //values double_test: 9.6, 5.4, 135.6
         }
     }

@@ -77,18 +77,6 @@ namespace ShowCase
 
 ### Min/ max (smallest/ biggest) values in array:
 
-<br>
-
----
-
-**NOTE**
-
-Min/ max only works with arrays of type double!
-
----
-
-<br>
-
 ```C#
 using Array_Library;
 
@@ -111,18 +99,6 @@ namespace ShowCase
 <br>
 
 ### Average:
-
-<br>
-
----
-
-**NOTE**
-
-Average only works with arrays of type double!
-
----
-
-<br>
 
 ```C#
 using Array_Library;

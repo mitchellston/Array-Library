@@ -22,6 +22,25 @@ namespace Array_Library
             return newArray;
 
         }
+        public static T[] limitedAdd<T>(T[] inputArray, T inputValue, int max)
+        {
+            T[] newArray = new T[inputArray.Length];
+
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                if (i != 0)
+                {
+                    newArray[i-1] = inputArray[i];
+                    if(i == inputArray.Length - 1)
+                    {
+                        newArray[i] = inputValue;
+                    }
+                }
+
+            }
+            return newArray;
+
+        }
         public static T[] remove<T>(T[] inputArray, int index)
         {
             

@@ -10,7 +10,7 @@ namespace Array_Library
             {
             }
         }   
-        public static T[] addToArray<T>(T[] inputArray, T inputValue)
+        public static T[] add<T>(T[] inputArray, T inputValue)
         {
             int int_new = inputArray.Length + 1;
             T[] newArray = new T[int_new];
@@ -22,26 +22,27 @@ namespace Array_Library
             return newArray;
 
         }
-        public static T[] removeFromArray<T>(T[] inputArray, int index)
+        public static T[] remove<T>(T[] inputArray, int index)
         {
-            if (index > inputArray.Length)
-            {
-                throw new ArgumentException("The array doesn't have a index that big (use addToArray to increase index)");
-            }
-            int int_new = inputArray.Length - 1;
-            T[] newArray = new T[int_new];
-            int int_indexLoop = 0;
-            for (int i = 0; i < inputArray.Length; i++)
-            {
-                if (i != index)
+            
+                if (index > inputArray.Length)
                 {
-                    newArray[int_indexLoop] = inputArray[i];
-                    int_indexLoop++;
+                    throw new ArgumentException("The array doesn't have a index that big (use addToArray to increase index)");
                 }
-            }
-            return newArray;
+                int int_new = inputArray.Length - 1;
+                T[] newArray = new T[int_new];
+                int int_indexLoop = 0;
+                for (int i = 0; i < inputArray.Length; i++)
+                {
+                    if (i != index)
+                    {
+                        newArray[int_indexLoop] = inputArray[i];
+                        int_indexLoop++;
+                    }
+                }
+                return newArray;
         }
-        public static T[] swapItemsInArray<T>(T[] inputArray, int[] indexes)
+        public static T[] swap<T>(T[] inputArray, int[] indexes)
         {
             T[] newArray = new T[inputArray.Length];
             if (indexes.Length > 2)
@@ -76,37 +77,40 @@ namespace Array_Library
             return newArray;
 
         }
-        public static double max(double[] inputArray)
+        public static double max<T>(T[] inputArray)
         {
-            double double_max = inputArray[0];
-            for (int i = 0; i < inputArray.Length; i++)
+            double[] double_inputArray = doubleParse(inputArray);
+            double double_max = double_inputArray[0];
+            for (int i = 0; i < double_inputArray.Length; i++)
             {
-                if (double_max < inputArray[i])
+                if (double_max < double_inputArray[i])
                 {
-                    double_max = inputArray[i];
+                    double_max = double_inputArray[i];
                 }
             }
             return double_max;
         }
-        public static double min(double[] inputArray)
+        public static double min<T>(T[] inputArray)
         {
-            double double_min = inputArray[0];
-            for (int i = 0; i < inputArray.Length; i++)
+            double[] double_inputArray = doubleParse(inputArray);
+            double double_min = double_inputArray[0];
+            for (int i = 0; i < double_inputArray.Length; i++)
             {
-                if (double_min > inputArray[i])
+                if (double_min > double_inputArray[i])
                 {
-                    double_min = inputArray[i];
+                    double_min = double_inputArray[i];
                 }
             }
             return double_min;
         }
-        public static double average(double[] inputArray)
+        public static double average<T>(T[] inputArray)
         {
+            double[] double_inputArray = doubleParse(inputArray);
             double double_all = 0;
             for (int i = 0; i < inputArray.Length; i++)
             {
 
-                double_all += inputArray[i];
+                double_all += double_inputArray[i];
 
             }
             double_all = double_all / inputArray.Length;

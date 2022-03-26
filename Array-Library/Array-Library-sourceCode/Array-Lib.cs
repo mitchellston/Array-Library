@@ -4,7 +4,12 @@ namespace Array_Library
 {
     public class arrayLibrary
     {
-
+        public class inputError : Exception
+        {
+            public inputError(string message)
+            {
+            }
+        }   
         public static T[] addToArray<T>(T[] inputArray, T inputValue)
         {
             int int_new = inputArray.Length + 1;

@@ -1,4 +1,167 @@
-# array-Library
-I hate arrays in C# so here you have some functions that can help!
-(yes I do know about lists but I have had some school assignments where I couldn't use them)
-Just take whatever function you need from the project or just copy the class/ file!
+# Array Library
+
+A C# library that provides a few convenient functions for arrays.<br>
+**In packaged-library is the build version. Array-Library is the source code!**
+
+<br>
+<br>
+
+# Usage:
+
+### Add value to array:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            //array = arrayLibrary.addToArray(array, index);
+            double_test = arrayLibrary.addToArray(double_test, 2.5235);
+            //values double_test: 5.4, 9.6, 135.6, 2.5235
+        }
+    }
+}
+```
+
+<br>
+
+### Remove value from array:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            //var array = arrayLibrary.removeFromArray(var array, var index);
+            double_test = arrayLibrary.removeFromArray(double_test, 0);
+            //values double_test: 9.6, 135.6
+        }
+    }
+}
+```
+
+<br>
+
+### Swap/ switch values in array:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            int[] indexes = { 0, 1};
+            //var array = arrayLibrary.swapItemsInArray(var array, var indexes);
+            double_test = arrayLibrary.swapItemsInArray(double_test, 0);
+            //values double_test: 9.6, 135.6
+        }
+    }
+}
+```
+
+<br>
+
+### Min/ max (smallest/ biggest) values in array:
+
+<br>
+
+---
+
+**NOTE**
+
+Min/ max only works with arrays of type double!
+
+---
+
+<br>
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            double min = arrayLibrary.min(double_test);
+            double max = arrayLibrary.max(double_test);
+            Console.WriteLine("min = "+min+" & max = "+max);
+            //Console output: min = 5.4 & max = 135.6
+        }
+    }
+}
+```
+
+<br>
+
+### Average:
+
+<br>
+
+---
+
+**NOTE**
+
+Average only works with arrays of type double!
+
+---
+
+<br>
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            double[] double_test = { 5.4, 9.6, 135.6 };
+            double average = arrayLibrary.average(double_test);
+            Console.WriteLine("average = "+average);
+            //Console output: average = 50,199999999999996
+        }
+    }
+}
+```
+
+<br>
+
+### Convert array to double:
+
+```C#
+using Array_Library;
+
+namespace ShowCase
+{
+    class Program
+    {
+        static void Main()
+        {
+            int[] int_test = { 5, 9, 135 };
+            double[] converted = arrayLibrary.doubleParse(int_test);
+            //Gives var converted the same values as int_test
+            //(only diffrence is that converted is a double and not a int)
+        }
+    }
+}
+```
+
+<br>

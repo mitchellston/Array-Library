@@ -41,6 +41,44 @@ namespace Array_Library
             return newArray;
 
         }
+        public static T[] insert<T>(T[] inputArray, T inputValue, int index)
+        {
+            T[] newArray = new T[inputArray.Length+1];
+            if(index > newArray.Length)
+            {
+                throw new ArgumentException("The index is higher than the array!");
+            }
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                if (i < index)
+                {
+                    newArray[i] = inputArray[i];
+                } 
+                if(i == index)
+                {
+                    newArray[i] = inputValue;
+                    
+                } 
+                if(i >= index)
+                {
+                    newArray[i + 1] = inputArray[i];
+                }
+
+            }
+            return newArray;
+
+        }
+        public static double sum<T>(T[] inputArray)
+        {
+            double sum = 0;
+            
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                sum = Convert.ToDouble(sum) + Convert.ToDouble(inputArray[i]);
+            }
+            return sum;
+
+        }
         public static T[] remove<T>(T[] inputArray, int index)
         {
             

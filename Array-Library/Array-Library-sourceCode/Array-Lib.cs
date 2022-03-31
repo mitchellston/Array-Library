@@ -2,7 +2,7 @@
 
 namespace Array_Library
 {
-    public class arrayLibrary
+    static public class arrayLibrary
     {
         public class inputError : Exception
         {
@@ -10,7 +10,7 @@ namespace Array_Library
             {
             }
         }   
-        public static T[] add<T>(T[] inputArray, T inputValue)
+        public static T[] add<T>(this T[] inputArray, T inputValue)
         {
             int int_new = inputArray.Length + 1;
             T[] newArray = new T[int_new];
@@ -22,7 +22,7 @@ namespace Array_Library
             return newArray;
 
         }
-        public static T[] limitedAdd<T>(T[] inputArray, T inputValue)
+        public static T[] limitedAdd<T>(this T[] inputArray, T inputValue)
         {
             T[] newArray = new T[inputArray.Length];
 
@@ -41,7 +41,7 @@ namespace Array_Library
             return newArray;
 
         }
-        public static T[] insert<T>(T[] inputArray, T inputValue, int index)
+        public static T[] insert<T>(this T[] inputArray, T inputValue, int index)
         {
             T[] newArray = new T[inputArray.Length+1];
             if(index > newArray.Length)
@@ -68,7 +68,7 @@ namespace Array_Library
             return newArray;
 
         }
-        public static double sum<T>(T[] inputArray)
+        public static double sum<T>(this T[] inputArray)
         {
             double sum = 0;
             
@@ -79,7 +79,7 @@ namespace Array_Library
             return sum;
 
         }
-        public static T[] remove<T>(T[] inputArray, int index)
+        public static T[] remove<T>(this T[] inputArray, int index)
         {
             
                 if (index > inputArray.Length)
@@ -99,7 +99,7 @@ namespace Array_Library
                 }
                 return newArray;
         }
-        public static T[] swap<T>(T[] inputArray, int[] indexes)
+        public static T[] swap<T>(this T[] inputArray, int[] indexes)
         {
             T[] newArray = new T[inputArray.Length];
             if (indexes.Length > 2)
@@ -123,7 +123,7 @@ namespace Array_Library
             }
             return newArray;
         }
-        public static double[] doubleParse<T>(T[] inputArray)
+        private static double[] doubleParse<T>(T[] inputArray)
         {
             double[] newArray = new double[inputArray.Length];
 
@@ -134,7 +134,7 @@ namespace Array_Library
             return newArray;
 
         }
-        public static double max<T>(T[] inputArray)
+        public static double max<T>(this T[] inputArray)
         {
             double[] double_inputArray = doubleParse(inputArray);
             double double_max = double_inputArray[0];
@@ -147,7 +147,7 @@ namespace Array_Library
             }
             return double_max;
         }
-        public static double min<T>(T[] inputArray)
+        public static double min<T>(this T[] inputArray)
         {
             double[] double_inputArray = doubleParse(inputArray);
             double double_min = double_inputArray[0];
@@ -160,7 +160,7 @@ namespace Array_Library
             }
             return double_min;
         }
-        public static double average<T>(T[] inputArray)
+        public static double average<T>(this T[] inputArray)
         {
             double[] double_inputArray = doubleParse(inputArray);
             double double_all = 0;

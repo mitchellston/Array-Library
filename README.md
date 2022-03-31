@@ -20,8 +20,8 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            //array = arrayLibrary.add(array, index);
-            double_test = arrayLibrary.add(double_test, 2.5235);
+            //array = array.add(value);
+            double_test = double_test.add(2.5235);
             //values double_test: 5.4, 9.6, 135.6, 2.5235
         }
     }
@@ -42,8 +42,8 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            //var array = arrayLibrary.remove(var array, var index);
-            double_test = arrayLibrary.remove(double_test, 0);
+            //var array = array.remove(index);
+            double_test = double_test.remove(0);
             //values double_test: 9.6, 135.6
         }
     }
@@ -64,8 +64,8 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            //var array = arrayLibrary.remove(var array, var index);
-            double_test = arrayLibrary.insert(double_test, 12, 1);
+            //var array = array.insert(value, index);
+            double_test = double_test.insert(12, 1);
             //values double_test: 5.4, 12, 9.6, 135.6
         }
     }
@@ -88,8 +88,8 @@ namespace ShowCase
             double[] double_test = { 5.4, 9.6, 135.6 };
             int[] indexes = { 0, 1};
 
-            //var array = arrayLibrary.swap(var array, var indexes);
-            double_test = arrayLibrary.swap(double_test, indexes);
+            //var array = array.swap(indexes);
+            double_test = double_test.swap(indexes);
             //values double_test: 9.6, 5.4, 135.6
         }
     }
@@ -112,9 +112,9 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            //var array = arrayLibrary.limitedAdd(var array, var indexes);
-            double_test = arrayLibrary.limitedAdd(double_test, 15.79);
-            //values double_test: 5.4, 135.6, 15.79
+            //var array = array.limitedAdd(value);
+            double_test = double_test.limitedAdd(15.79);
+            //values double_test: 9.6, 135.6, 15.79
         }
     }
 }
@@ -135,8 +135,8 @@ namespace ShowCase
         {
             double[] double_testMin = { 5.4, 9.6, 135.6 };
             int[] int_testMax = {1, 5, 25};
-            double min = arrayLibrary.min(double_testMin);
-            double max = arrayLibrary.max(int_testMax);
+            double min = double_testMin.min();
+            double max = int_testMax.max();
             Console.WriteLine("min = "+min+" & max = "+max);
             //Console output: min = 5.4 & max = 25
         }
@@ -158,7 +158,7 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            double average = arrayLibrary.average(double_test);
+            double average = double_test.average();
             Console.WriteLine("average = "+average);
             //Console output: average = 50,199999999999996
         }
@@ -180,34 +180,10 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
-            double sum = arrayLibrary.sum(double_test);
+            double sum = double_test.sum();
             Console.WriteLine("sum = "+sum);
             //Console output: sum = 150,6
         }
     }
 }
 ```
-
-<br>
-
-### Convert array to double:
-
-```C#
-using Array_Library;
-
-namespace ShowCase
-{
-    class Program
-    {
-        static void Main()
-        {
-            int[] int_test = { 5, 9, 135 };
-            double[] converted = arrayLibrary.doubleParse(int_test);
-            //Gives var converted the same values as int_test
-            //(only diffrence is that converted is a double and not a int)
-        }
-    }
-}
-```
-
-<br>

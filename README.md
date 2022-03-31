@@ -4,7 +4,6 @@ A C# library that provides a few convenient functions for arrays.<br>
 **In packaged-library is the build version. Array-Library is the source code!**
 
 <br>
-<br>
 
 # Usage:
 
@@ -112,8 +111,12 @@ namespace ShowCase
         static void Main()
         {
             double[] double_test = { 5.4, 9.6, 135.6 };
+
             //var array = array.limitedAdd(value);
             double_test = double_test.limitedAdd(15.79);
+
+            
+
             //values double_test: 9.6, 135.6, 15.79
         }
     }
